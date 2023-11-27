@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import userDefaultPic from "../../assets/user.png";
+import ThemeChange from "./ThemeChange/ThemeChange";
 
 export default function Navbar() {
   const navLinks = (
@@ -12,6 +13,9 @@ export default function Navbar() {
       </li>
       <li>
         <NavLink to="/career">Carrer</NavLink>
+      </li>
+      <li>
+        <ThemeChange />
       </li>
     </>
   );
