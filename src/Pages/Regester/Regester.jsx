@@ -1,9 +1,28 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Components/Share/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 export default function Regester() {
+  const { createUser } = useContext(AuthContext);
+
   const hendleRester = (e) => {
     e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    const name = form.get("name");
+    const photoURL = form.get("photo");
+    console.log(name, email, password, photoURL);
+
+    // create User
+    createUser(email, password)
+      .then((resutl) => {
+        console.log(resutl.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div>
