@@ -14,11 +14,11 @@ export default function ThemeChange() {
     <div onClick={() => setIsChange(!isChange)}>
       {isChange ? (
         <span>
-          <MdOutlineLightMode />
+          <MdDarkMode />
         </span>
       ) : (
         <span>
-          <MdDarkMode />
+          <MdOutlineLightMode />
         </span>
       )}
     </div>
