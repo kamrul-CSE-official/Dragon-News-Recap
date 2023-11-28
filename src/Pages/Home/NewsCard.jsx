@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
+// 
 export default function NewsCard({ news }) {
   const { title, image_url, details, _id } = news;
   return (
